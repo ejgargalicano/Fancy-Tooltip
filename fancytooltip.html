@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <title>CSS3 BG fancy tooltip</title>
+    <meta name="author" content="Erwin Jove Gargalicano" />
+    <link media='screen' type='text/css' rel="stylesheet" href="css/style.css" />
+    <script type="text/javascript" src="libs/jquery.min.js"></script>
+    <script type="text/javascript" src="libs/modernizr.min.js"></script>
+    <script type="text/javascript" src="script/fancytooltip.js"></script>
+    
+    <script type="text/javascript">
+        //Initialization 
+        $(document).ready(function(){
+            
+            $('a.type-2').fancyTip({
+                title:'User replaced Setting for the tooltip Content and override bg color',
+                bgColor: 'red'
+            });
+            
+            $('a.type-1').fancyTip({
+                tipPosition: 'top'
+            });
+            
+            $('a.type-3').fancyTip({
+                bgColor: 'black',
+                tipPosition: 'top'
+            });
+        });
+    </script>
+</head>
+
+<body>
+    <section id="page-container">
+        <section id="page-header">
+            <div class="page-header-inner">
+                <div class="page-header-aligner"></div>
+            </div>
+        </section>
+        <section id="page-body">
+            <div class="page-body-inner">
+                <div class="page-body-aligner">
+                    <article>
+                        <h2 style="text-align: center">
+                            A simple jQuery tooltip plugin 
+                        </h2>
+                        <ul style="margin: 20px; padding: 10px;">
+                            <li>Features
+                                <ul id="features-list">
+                                    <li>Interchangeble position via property override (Top and bottom)</li>
+                                    <li>Content can be overriden via plugin initialization</li>
+                                    <li>Pure CSS background gradient (Can be change via plugin initializaion (<span style="color: red">Red</span>, <span style="color: blue">Blue</span> and <span style="color: black">Black</span>))</li>
+                                </ul>
+                            </li>
+                        </ul>
+                        <h4>Try hovering on the anchor tags!!!</h4>
+                    
+                        <p class="fancytip">
+                            Proin elementum, risus non <a class="type-1" href="#" title="Mauris ut libero!!">faucibus</a> porttitor, nisl dolor consectetur dolor,
+                            vitae rutrum elit risus id nisl. Praesent fermentum tempus nisl a feugiat. Integer
+                            id convallis est. Aliquam fermentum <a class="type-2" href="#" title="Phasellus quis ante purus, at gravida nunc. " class="tooltip">placerat</a> mi placerat in aliquam odio lacinia.
+                            Aliquam non nibh vitae arcu molestie convallis ut vitae elit. Vestibulum ac est vitae erat
+                            rutrum dignissim vel et sapien. <a class="type-3" href="#" title="Phasellus quis ante purus, at gravida nunc. " class="tooltip">Mauris ut libero</a> ac mauris mollis condimentum. Sed odio nulla,
+                            vehicula nec faucibus a, suscipit eu nisl. 
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+    </section>
+
+</body>
+</html>
